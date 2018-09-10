@@ -132,8 +132,18 @@
                 }
             }
 
+            var amounts = transaction.transfers
+                .filter(function (transfer) {
+                    return transfer.recipient === applicationContext.account.address;
+                }).map(function (transfer) {
+                    return transfer.amount;
+                });
+            var total = _.reduce(amounts, function (memo, number) {
+                return memo + number;
+            }, 0);
+
             transaction.formatted.asset = currency.displayName;
-            transaction.formatted.amount = Money.fromCoins(transaction.totalAmount, currency).formatAmount();
+            transaction.formatted.amount = Money.fromCoins(total, currency).formatAmount();
         }
 
         function processExchangeTransaction(transaction) {
