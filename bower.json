@@ -33,6 +33,8 @@
     "angular-loader": "1.7.4",
     "angular-sanitize": "1.7.4",
     "angular": "1.7.4",
-    "angular-mocks": "1.7.4"
+    "angular-mocks": "1.7.4",
+    "lodash": "4.17.5",
+    "debug": "2.6.9"
   }
 }

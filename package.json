@@ -13,7 +13,7 @@
   "devDependencies": {
     "autoprefixer": "^6.7.6",
     "cssnano": "^3.10.0",
-    "electron": "1.7.16",
+    "electron": "1.8.8",
     "electron-builder": "19.51.0",
     "electron-prebuilt": "^1.4.13",
     "grunt": "^1.0.1",
