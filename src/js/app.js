@@ -9,6 +9,10 @@
 var __mockShowError = function(message) {};
 var __mockValidateAddress = function(address) {};
 
+if (angular.$$lowercase) {
+    angular.lowercase = angular.$$lowercase;
+}
+
 var app = angular.module('app', [
     'restangular',
     'waves.core',

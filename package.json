@@ -4,7 +4,7 @@
   "description": "A lite client for the Waves platform",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wavesplatform/WavesGUI.git"
+    "url": "https://github.com/wavesplatform/WavesClientLite.git"
   },
   "license": "Apache-2.0",
   "engines": {
@@ -13,9 +13,8 @@
   "devDependencies": {
     "autoprefixer": "^6.7.6",
     "cssnano": "^3.10.0",
-    "electron": "^1.6.8",
-    "electron-builder": "^17.5.0",
-    "electron-packager": "^8.7.0",
+    "electron": "1.7.16",
+    "electron-builder": "19.51.0",
     "electron-prebuilt": "^1.4.13",
     "grunt": "^1.0.1",
     "grunt-angular-templates": "^1.1.0",
@@ -35,12 +34,10 @@
     "grunt-karma": "*",
     "grunt-postcss": "^0.8.0",
     "grunt-shell": "1.3.0",
-    "grunt-webstore-upload": "0.9.3",
-    "karma": "^0.13.0",
-    "karma-jasmine": "1.0.2",
-    "karma-phantomjs-launcher": "1.0.1",
-    "pixrem": "^3.0.2",
-    "waves-grunt-github-releaser": "^0.2.0"
+    "karma": "3.0.0",
+    "karma-jasmine": "1.1.2",
+    "karma-phantomjs-launcher": "1.0.4",
+    "pixrem": "^3.0.2"
   },
   "scripts": {
     "postinstall": "bower install"

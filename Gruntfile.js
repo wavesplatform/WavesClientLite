@@ -518,43 +518,6 @@ module.exports = function (grunt) {
                 src: 'distr/CHANGELOG.tmp'
             }
         },
-        "github-release": {
-            options: {
-                repository : "wavesplatform/WavesGUI",
-                auth: {
-                    user: process.env["GITHUB_ACCESS_TOKEN"],
-                    password: ''
-                },
-                release: {
-                    tag_name: "v<%= pkg.version %>",
-                    name: "v<%= pkg.version %>",
-                    bodyFilename: 'distr/CHANGELOG.tmp',
-                    draft: true,
-                    prerelease: true
-                }
-            },
-            files: {
-                expand: true,
-                src: ['<%= compress.testnet.options.archive %>', '<%= compress.mainnet.options.archive %>']
-            }
-        },
-        webstore_upload: {
-            "accounts": {
-                "default": { //account under this section will be used by default
-                    publish: false, //publish item right after uploading. default false
-                    client_id: process.env["WEBSTORE_CLIENT_ID"],
-                    client_secret: ""
-                }
-            },
-            "extensions": {
-                "WavesLiteApp": {
-                    //required
-                    appID: "kfmcaklajknfekomaflnhkjjkcjabogm",
-                    //required, we can use dir name and upload most recent zip file
-                    zip: "<%= compress.chrome_mainnet.options.archive %>"
-                }
-            }
-        },
         s3: {
             options: {
                 accessKeyId: process.env['WALLET_AWS_ACCESS_KEY_ID'],
@@ -626,8 +589,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('distr', ['clean', 'build', 'emptyChangelog', 'copy', 'compress']);
-    grunt.registerTask('publish', ['bump', 'distr', 'conventionalChangelog', 'shell', 'github-release']);
-    grunt.registerTask('deploy', ['webstore_upload', 's3']);
+    grunt.registerTask('deploy', ['s3']);
     grunt.registerTask('test', ['jshint', 'jscs', 'karma:development']);
     grunt.registerTask('styles', ['less', 'copy:fonts', 'copy:img']);
 
