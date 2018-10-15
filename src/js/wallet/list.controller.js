@@ -180,12 +180,17 @@
         // Assets ID substitution for testnet
         function patchCurrencyIdsForTestnet() {
             if ($scope.isTestnet()) {
-                Currency.EUR.id = '2xnE3EdpqXtFgCP156qt1AbyjpqdZ5jGjWo3CwTawcux';
-                Currency.USD.id = 'HyFJ3rrq5m7FxdkWtQXkZrDat1F7LjVVGfpSkUuEXQHj';
-                Currency.BTC.id = 'Fmg13HEHJHuZYbtJq8Da8wifJENq8uBxDuWoP9pVe2Qe';
-                Currency.ETH.id = '3fVdr1oiX39uS82ZGUPnu7atNQtFHZfPnseRDUcDxrhp';
-                Currency.LTC.id = 'NO_ID_YET'; // FIXME
-                Currency.ZEC.id = 'NO_ID_YET'; // FIXME
+                Currency.EUR.id = 'AsuWyM9MUUsMmWkK7jS48L3ky6gA1pxx7QtEYPbfLjAJ';
+                Currency.USD.id = 'D6N2rAqWN6ZCWnCeNFWLGqqjS6nJLeK4m19XiuhdDenr';
+                Currency.BTC.id = 'DWgwcZTMhSvnyYCoWLRUXXSH1RSkzThXLJhww9gwkqdn';
+                Currency.ETH.id = 'BrmjyAWT5jjr3Wpsiyivyvg5vDuzoX2s93WgiexXetB3';
+                Currency.LTC.id = 'BNdAstuFogzSyN2rY3beJbnBYwYcu7RzTHFjW88g8roK';
+                Currency.ZEC.id = 'CFg2KQfkUgUVM2jFCMC5Xh8T8zrebvPc4HjHPfAugU1S';
+                Currency.BCH.id = '8HT8tXwrXAYqwm8XrZ2hywWWTUAXxobHB5DakVC1y6jn';
+                Currency.TRY.id = '7itsmgdmomeTXvZzaaxqF3346h4FhciRoWceEw9asNV3';
+                Currency.DASH.id = 'DGgBtwVoXKAKKvV2ayUpSoPzTJxt7jo9KiXMJRzTH2ET';
+                Currency.EFYT.id = 'FvKx3cerSVYGfXKFvUgp7koNuTAcLs8DmtmwRrFVCqJv';
+                Currency.WNET.id = '3P8gkhcLhFQvBkDzMnWeqqwvq3qxkpTNQPs4LUQ95tKD';
                 Currency.invalidateCache();
             }
         }
